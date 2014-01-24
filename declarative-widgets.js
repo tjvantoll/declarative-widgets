@@ -38,11 +38,12 @@
 	});
 
 	$.extend( $.fn, {
-		initWidgets: function( selector ) {
-			this.andSelf().find( "[data-widget]" ).each(function() {
+		initWidgets: function() {
+			this.addBack().find( "[data-widget]" ).each(function() {
 				var role = $( this ).attr( "data-widget" );
 				$.fn[ role ].apply( $( this ) );
 			});
+			return this;
 		}
 	});
 }( jQuery ));
