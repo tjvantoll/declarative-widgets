@@ -5,7 +5,8 @@
 	"keywords": [
 		"widget",
 		"factory",
-		"declarative"
+		"declarative",
+		"ui"
 	],
 	"version": "0.1.0",
 	"author": {
@@ -20,7 +21,6 @@
 		}
 	],
 	"bugs": "https://github.com/tjvantoll/Declarative-Widgets/issues",
-	"homepage": "https://github.com/tjvantoll/Declarative-Widgets",
 	"docs": "https://github.com/tjvantoll/Declarative-Widgets/blob/master/README.md",
 	"dependencies": {
 		"jquery": ">=1.9",
