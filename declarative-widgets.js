@@ -25,7 +25,6 @@
 			var option, value,
 				options = {};
 
-			console.log( this.element[0].outerHTML );
 			for ( option in this.options ) {
 				value = this.element.attr( "data-" + option.replace( capitals, buildAttribute ) );
 				value = stringToType( value );
