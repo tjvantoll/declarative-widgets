@@ -15,6 +15,13 @@ Then initialize the widget's plugin:
 
 	$( "#dialog" ).dialog();
 
+If you don't like individually invoking plugins, you can use `$.fn.initWidgets()` instead. The following initializes the same dialog.
+
+	<div data-widget="dialog" data-title="Hello World" data-height="600"></div>
+	<script>
+	    $( document.body ).initWidgets();
+	</script>
+
 ### Dependencies
 
 * [Widget Factory](http://api.jqueryui.com/jquery.widget/)
