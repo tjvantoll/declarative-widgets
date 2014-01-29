@@ -1,4 +1,14 @@
-(function( $ ) {
+(function( factory ) {
+	if ( typeof define === "function" && define.amd ) {
+
+		// AMD. Register as an anonymous module.
+		define( [ "jquery", "widget" ], factory );
+	} else {
+
+		// Browser globals
+		factory( jQuery );
+	}
+}(function( $ ) {
 	var capitals = /[A-Z]/g,
 		buildAttribute = function( c ) {
 			return "-" + c.toLowerCase();
@@ -11,6 +21,7 @@
 				data = data === "true" ? true :
 				data === "false" ? false :
 				data === "null" ? null :
+
 				// Only convert to a number if it doesn't change the string
 				+data + "" === data ? +data :
 				rbrace.test( data ) ? JSON.parse( data ) :
@@ -18,8 +29,17 @@
 			} catch( err ) {}
 			
 			return data;
+		},
+		plugin = {
+			initWidgets: function() {
+				this.addBack().find( "[data-widget]" ).each(function() {
+					var role = $( this ).attr( "data-widget" );
+					$.fn[ role ].apply( $( this ) );
+				});
+				return this;
+			}
 		};
-	
+
 	$.extend( $.Widget.prototype, {
 		_getCreateOptions: function() {
 			var option, value,
@@ -32,18 +52,11 @@
 					options[ option ] = value;
 				}
 			}
-			
+
 			return options;
 		}
 	});
 
-	$.extend( $.fn, {
-		initWidgets: function() {
-			this.addBack().find( "[data-widget]" ).each(function() {
-				var role = $( this ).attr( "data-widget" );
-				$.fn[ role ].apply( $( this ) );
-			});
-			return this;
-		}
-	});
-}( jQuery ));
+	$.extend( $.fn, plugin );
+	return plugin;
+}));
