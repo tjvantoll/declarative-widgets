@@ -19,7 +19,7 @@ If you don't like individually invoking plugins, you can use `$.fn.enhance()` in
 
 	<div data-role="dialog" data-title="Hello World" data-height="600"></div>
 	<script>
-	    $( document ).initWidgets();
+	    $( document ).enhance();
 	</script>
 
 ### Dependencies
