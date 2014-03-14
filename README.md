@@ -15,11 +15,11 @@ Then initialize the widget's plugin:
 
 	$( "#dialog" ).dialog();
 
-If you don't like individually invoking plugins, you can use `$.fn.initWidgets()` instead. The following initializes the same dialog.
+If you don't like individually invoking plugins, you can use `$.fn.enhance()` instead. The following initializes the same dialog.
 
-	<div data-widget="dialog" data-title="Hello World" data-height="600"></div>
+	<div data-role="dialog" data-title="Hello World" data-height="600"></div>
 	<script>
-	    $( document.body ).initWidgets();
+	    $( document ).initWidgets();
 	</script>
 
 ### Dependencies

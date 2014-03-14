@@ -15,7 +15,7 @@ require([ "declarative-widgets" ], function( declarative ) {
 
 	test( "Public API", function() {
 		expect( 1 );
-		equal( typeof declarative.initWidgets, "function" );
+		equal( typeof declarative.enhance, "function" );
 	});
 
 	test( "Attribute reading", function() {
@@ -38,14 +38,14 @@ require([ "declarative-widgets" ], function( declarative ) {
 		equal( options.four, 4 );
 	});
 
-	test( "initWidgets plugin", function() {
+	test( "enhance plugin", function() {
 		expect( 2 );
 		var div = $( "<div>", {
-			"data-widget": "test",
+			"data-role": "test",
 			"data-one": "bar"
 		});
 
-		fixture.append( div ).initWidgets();
+		fixture.append( div ).enhance();
 
 		ok( div.is( ":tj-test" ) );
 		equal( div.test( "instance" ).options.one, "bar" );

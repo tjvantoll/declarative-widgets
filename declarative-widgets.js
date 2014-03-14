@@ -16,7 +16,7 @@
 		stringToType = function( data ) {
 
 			// Copied from core's src/data.js:dataAttr()
-			var rbrace = rbrace = /(?:\{[\s\S]*\}|\[[\s\S]*\])$/;
+			var rbrace = /(?:\{[\s\S]*\}|\[[\s\S]*\])$/;
 			try {
 				data = data === "true" ? true :
 				data === "false" ? false :
@@ -31,9 +31,9 @@
 			return data;
 		},
 		plugin = {
-			initWidgets: function() {
-				this.addBack().find( "[data-widget]" ).each(function() {
-					var role = $( this ).attr( "data-widget" );
+			enhance: function() {
+				this.addBack().find( "[data-role]" ).each(function() {
+					var role = $( this ).attr( "data-role" );
 					$.fn[ role ].apply( $( this ) );
 				});
 				return this;
