@@ -9,7 +9,9 @@ require([ "declarative-widgets" ], function( declarative ) {
 			one: "string",
 			two: false,
 			three: true,
-			four: 0
+			four: 0,
+			five: [ "array" ],
+			six: { key: "value" }
 		}
 	});
 
@@ -19,14 +21,9 @@ require([ "declarative-widgets" ], function( declarative ) {
 	});
 
 	test( "Attribute reading", function() {
-		expect( 4 );
+		expect( 6 );
 		var options,
-			div = $( "<div>", {
-				"data-one": "foo",
-				"data-two": true,
-				"data-three": false,
-				"data-four": 4
-			});
+			div = $( "#attribute-test" );
 
 		fixture.append( div );
 		div.test();
@@ -36,6 +33,8 @@ require([ "declarative-widgets" ], function( declarative ) {
 		equal( options.two, true );
 		equal( options.three, false );
 		equal( options.four, 4 );
+		deepEqual( options.five, [ "foo" ]);
+		deepEqual( options.six, { key: "bar" });
 	});
 
 	test( "enhance plugin - called on parent element", function() {

@@ -7,9 +7,12 @@
 </head>
 <body>
 	<div id="qunit"></div>
-	<div id="qunit-fixture"></div>
-	<script src="qunit.js"></script>
+	<div id="qunit-fixture">
+		<div id="attribute-test" data-one='foo' data-two='true' data-three='false'
+			data-four='4' data-five='["foo"]' data-six='{ "key":"bar" }'></div>
+	</div>
 
+	<script src="qunit.js"></script>
 	<script src="require.js" data-main="tests"></script>
 </body>
 </html>
