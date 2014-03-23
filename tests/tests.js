@@ -38,7 +38,7 @@ require([ "declarative-widgets" ], function( declarative ) {
 		equal( options.four, 4 );
 	});
 
-	test( "enhance plugin", function() {
+	test( "enhance plugin - called on parent element", function() {
 		expect( 2 );
 		var div = $( "<div>", {
 			"data-role": "test",
@@ -46,6 +46,20 @@ require([ "declarative-widgets" ], function( declarative ) {
 		});
 
 		fixture.append( div ).enhance();
+
+		ok( div.is( ":tj-test" ) );
+		equal( div.test( "instance" ).options.one, "bar" );
+	});
+
+	test( "enhance plugin - called on element itself", function() {
+		expect( 2 );
+		var div = $( "<div>", {
+			"data-role": "test",
+			"data-one": "bar"
+		});
+
+		fixture.append( div );
+		div.enhance();
 
 		ok( div.is( ":tj-test" ) );
 		equal( div.test( "instance" ).options.one, "bar" );

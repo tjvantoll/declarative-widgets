@@ -32,7 +32,7 @@
 		},
 		plugin = {
 			enhance: function() {
-				this.addBack().find( "[data-role]" ).each(function() {
+				this.find( "[data-role]" ).addBack( "[data-role]" ).each(function() {
 					var role = $( this ).attr( "data-role" );
 					$.fn[ role ].apply( $( this ) );
 				});
