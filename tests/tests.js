@@ -1,5 +1,14 @@
 require.config({
-	baseUrl: "../"
+	baseUrl: "../",
+	paths: {
+		"jquery": "bower_components/jquery/dist/jquery",
+		"widget": "bower_components/jquery-ui/ui/widget"
+	},
+	shim: {
+		"jquery": {
+			exports: "jQuery"
+		}
+	}
 });
 
 require([ "declarative-widgets" ], function( declarative ) {
