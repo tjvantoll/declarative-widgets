@@ -11,7 +11,8 @@ require([ "declarative-widgets" ], function( declarative ) {
 			three: true,
 			four: 0,
 			five: [ "array" ],
-			six: { key: "value" }
+			six: { key: "value" },
+			multipleWords: "string"
 		}
 	});
 
@@ -21,7 +22,7 @@ require([ "declarative-widgets" ], function( declarative ) {
 	});
 
 	test( "Attribute reading", function() {
-		expect( 6 );
+		expect( 7 );
 		var options,
 			div = $( "#attribute-test" );
 
@@ -35,6 +36,7 @@ require([ "declarative-widgets" ], function( declarative ) {
 		equal( options.four, 4 );
 		deepEqual( options.five, [ "foo" ]);
 		deepEqual( options.six, { key: "bar" });
+		deepEqual( options.multipleWords, "foo" );
 	});
 
 	test( "enhance plugin - called on parent element", function() {
