@@ -1,3 +1,10 @@
+/*
+ * Declarative Widgets 0.4.0
+ * https://github.com/tjvantoll/Declarative-Widgets
+ *
+ * Copyright TJ VanToll
+ * Released under the MIT license.
+ */
 (function( factory ) {
 	if ( typeof define === "function" && define.amd ) {
 
