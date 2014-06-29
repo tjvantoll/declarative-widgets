@@ -2,12 +2,7 @@ require.config({
 	baseUrl: "../",
 	paths: {
 		"jquery": "bower_components/jquery/dist/jquery",
-		"widget": "bower_components/jquery-ui/ui/widget"
-	},
-	shim: {
-		"jquery": {
-			exports: "jQuery"
-		}
+		"jquery-ui": "bower_components/jquery-ui/ui"
 	}
 });
 
