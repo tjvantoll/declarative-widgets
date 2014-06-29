@@ -3,8 +3,6 @@ Declarative Widgets
 
 A simple means of declaratively specifying options for widgets built with the widget factory.
 
-> This implementation is a slightly modified version of what is used in [jQuery Mobile](https://github.com/jquery/jquery-mobile).
-
 ### Usage
 
 Add the options you need as data-* attributes. For instance, this configures jQuery UI's dialog widget's `title` and `height` options.
@@ -22,6 +20,11 @@ If you don't like individually invoking plugins, you can use `$.fn.enhance()` in
 	    $( document ).enhance();
 	</script>
 
+### Bower
+
+`bower install declarative-widgets`
+
 ### Dependencies
 
+* [jQuery](http://jquery.com)
 * [Widget Factory](http://api.jqueryui.com/jquery.widget/)
