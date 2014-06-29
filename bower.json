@@ -1,7 +1,7 @@
 {
 	"name": "declarative-widgets",
 	"main": "declarative-widgets.js",
-	"version": "0.3.0",
+	"version": "0.4.0",
 	"homepage": "https://github.com/tjvantoll/Declarative-Widgets",
 	"authors": [
 		"TJ VanToll <tj.vantoll@gmail.com>"
