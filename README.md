@@ -28,3 +28,11 @@ If you don't like individually invoking plugins, you can use `$.fn.enhance()` in
 
 * [jQuery](http://jquery.com)
 * [Widget Factory](http://api.jqueryui.com/jquery.widget/)
+
+### License
+
+MIT. Go nuts.
+
+### Want to learn more?
+
+This plugin, as well as the process of building and using jQuery UI extensions is thoroughly explained in [*jQuery UI in Action*](http://tjvantoll.com/jquery-ui-in-action.html).
