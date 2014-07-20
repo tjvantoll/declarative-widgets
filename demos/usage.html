@@ -9,7 +9,21 @@
 </head>
 <body>
 
-<div data-role="dialog" data-title="Hello World" data-height="600"></div>
+<div data-role="tabs">
+	<ul>
+		<li><a href="#one">One</a></li>
+		<li><a href="#two">Two</a></li>
+	</ul>
+	<div id="one">
+		<div data-role="progressbar" data-value="false"></div>
+	</div>
+	<div id="two">
+		<div data-role="slider" data-min="0" data-max="50"
+			data-step="10"></div>
+	</div>
+</div>
+
+<div data-role="dialog" data-height="200" data-width="500"></div>
 
 <script src="../bower_components/jquery/dist/jquery.js"></script>
 <script src="../bower_components/jquery-ui/jquery-ui.js"></script>
